@@ -1,0 +1,704 @@
+1. Artificial intelligence is a field of creating systems or machines that can perform human like tasks that to in much better and efficient such as understanding language, generating images, recognizing the images or making the decisions.
+
+2. ML is a subset of AI that involves building algorithms that can learn from data and improve automatically without being explicitly programmed. 
+
+3. Types of Machine Learning
+
+	a. Supervised Learning:- Supervised Learning is a type of ML where the model is trained using labeled data, meaning both input (features) and output 
+                                 (target/label) are already known.
+			
+		How it Works:- 
+				1. You provide dataset with input + correct output.
+				2. Model learns the relationship between input and output.
+				3. After training, it predicts output for new data.
+	
+	        Types of Supervised Learning:-
+				1. Regression:- Regression problems deal with predicting continuous numerical values.
+				   Example: Predicting house prices based on size, location, etc.
+				   Output: Numerical (e.g., ₹5,00,000)
+
+				   Common Algorithms:- Linear Regression, Polynomial Regression
+
+
+				2. Classification:- Classification problems deal with predicting categorical labels.
+				   Example: Spam vs Not Spam
+				   Output: Categories (Yes/No, True/False)
+
+				   Common Algorithms:- Logistic Regression, Decision Tree, Random Forest, Support Vector Machine (SVM)
+
+        
+	b. Unsupervised Learning:- Unsupervised Learning is a type of machine learning where the model is trained on data without labeled outputs, meaning  				   must find hidden patterns and structures on its own. 
+				   In this type of learning, there is no correct answer provided. The model explores the dataset and identifies patterns, 				   relationships, or groupings based purely on similarities between data points. It is mainly used for data analysis and  
+				   pattern discovery, rather than direct prediction.
+
+		 Types of Unsupervised Learning:-
+			1. Clustering:- Clustering is used to group similar data points together.
+			   Example: Customer segmentation
+			   Goal: Identify groups with similar characteristics
+
+			   Common Algorithms:- K-Means Clustering, Hierarchical Clustering
+			
+			 2. Association Rule Learning:- This technique identifies relationships between variables.
+			    Example: Market basket analysis(Customers who buy milk also buy bread)
+
+			    Algorithm:- Apriori Algorithm
+
+			 3. Dimensionality Reduction:- This technique reduces the number of features while retaining important information.
+			    Example: Reducing dataset size for faster processing
+
+			    Algorithms: PCA (Principal Component Analysis), LDA (Linear Discriminant Analysis)
+
+
+4. Important Terminologies in ML:- 
+
+	a. Features (Input Variables):- i) Features are the input variables or independent variables used by a machine learning model to make predictions.
+        				ii) Features represent the characteristics or properties of the data that help the model learn patterns. These are					the values that you feed into the model during training and prediction.
+					iii) Each feature provides some information that influences the final output. The quality and relevance of features 					     directly affect the performance of the model.
+					     For example, when predicting house prices, features could include:
+
+							Size of the house
+							Number of rooms
+							Location
+							Age of the building
+
+					The model uses these inputs to understand how they relate to the price.
+
+       b. Target/Label (Output Variable):- i) The target (or label) is the output variable that the model is trying to predict.
+					   ii) The target represents the final answer that the model must learn. During training (in supervised learning), 					       the model compares its prediction with the actual target value to improve accuracy.
+
+					   iii) Targets depend on the type of problem:
+						Regression → Continuous values (e.g., price)
+						Classification → Categories (e.g., spam/not spam)out
+						Examples:- 
+							House price prediction → Target = Price
+							Email filtering → Target = Spam or Not Spam
+	
+	c. Dataset:- i) A dataset is a collection of data that contains both features (inputs) and labels (outputs).
+                     ii) A dataset is the foundation of any machine learning model. It is usually represented in a tabular format, where:
+				Rows = Observations (data points)
+				Columns = Features + Target
+
+		     iii) The dataset is used to train and evaluate the model.
+		     iv)  Types of Datasets:- Structured data (tables, Excel), Unstructured data (images, text, videos).
+
+	d. Training Data:- i) Training data is the portion of the dataset used to teach the model and help it learn patterns.
+			   ii) During training, the model is exposed to this data and learns the relationship between features and targets. The more 
+                               representative and clean the training data is, the better the model performs.
+			   iii) The model adjusts its parameters using this data to minimize prediction errors.
+
+				Key Points:-
+					Used to build the model
+					Usually the largest portion of dataset
+					Helps the model learn patterns
+
+
+				Real Example:- 
+					If you have 100 records:
+						80 records → Training
+						Model learns from these 80
+
+	e. Testing Data:- i) Testing data is the portion of the dataset used to evaluate the performance of the trained model.
+                          ii) After training the model, testing data is used to check how well the model generalizes to new, unseen data. 
+                          iii) This is crucial because a model might perform well on training data but fail on new data due to overfitting.
+
+				 Key Points:- 
+
+					Not used during training
+					Used only for evaluation
+					Helps measure real-world performance
+
+
+				Real Example:- 
+					From 100 records:
+						20 records → Testing
+						Model is tested on these unseen records
+
+	f. Train-Test Split:- i) Train-test split is the process of dividing the dataset into training and testing sets.
+			      ii) To ensure the model performs well on unseen data, the dataset is divided into two parts:
+				           Training set (used to learn)
+					   Testing set (used to evaluate)
+
+				   A common split ratio is: 80% training, 20% testing
+
+			      iii) This prevents the model from simply memorizing the data and ensures it can generalize.
+
+         g. Model:- i) A model is the trained version of an algorithm that has learned patterns from data and can make predictions.
+		    ii) When an algorithm (like Linear Regression) is applied to training data, it learns relationships and produces a trained system called 
+                        a model.
+                    iii) This model can then be used to predict outputs for new inputs.
+
+	 h. Algorithm:- i) An algorithm is a set of rules or mathematical procedures used to learn patterns from data.
+			ii) Algorithms are the backbone of machine learning. They define how the model will learn from data.
+				Examples: Linear Regression, Decision Tree, K-Means
+			iii) Different algorithms are used for different types of problems.	
+
+
+5. What is overfitting?
+--> a. Overfitting occurs when a machine learning model learns the training data too well, including the noise and unnecessary details, resulting in poor 
+       performance on new (unseen) data.
+
+    b. In overfitting, the model becomes too complex and starts memorizing the training data instead of learning general patterns. It captures not only the     
+       actual relationships in the data but also random fluctuations (noise), which are not useful for prediction.
+
+    c. Because of this, the model performs extremely well on training data but fails when tested with new data, as it cannot generalize.
+
+6. What is Underfitting?
+--> a. Underfitting occurs when a model is too simple to learn the underlying patterns of the data, resulting in poor performance on both training and
+       testing data. 
+
+    b. In underfitting, the model fails to capture the relationship between input and output. It does not learn enough from the data and therefore makes 
+       inaccurate predictions.
+
+    c. This happens when the model is overly simplified or insufficiently trained.
+
+7. Ideal Model?
+--> a. A good model should learn the true patterns in the data without memorizing noise or missing important relationships.
+       The ideal model lies between overfitting and underfitting. It should:
+			Perform well on training data.
+			Perform equally well on testing data.
+			Generalize to new unseen data.
+
+	This balance is known as the Bias-Variance Tradeoff
+
+8. What is Bias?
+--> a. Bias is the error that occurs when a model is too simple and makes strong assumptions about the data, leading to an inability to capture the true   
+       underlying patterns.
+ 
+    b. Bias represents how far the model’s predictions are from the actual values due to overly simplistic assumptions. When a model has high bias, it fails   
+       to learn the complexity of the data and produces inaccurate results.
+
+    c. A high-bias model tends to oversimplify relationships, ignoring important patterns. It assumes that the relationship between input and output is 
+       straightforward, even when it is not. 
+
+
+			Behavior of High Bias Model:
+				Performs poorly on training data.
+				Performs poorly on testing data.
+				Cannot capture true patterns.
+
+9. What is Variance?
+--> a. Variance is the error that occurs when a model is too complex and becomes highly sensitive to small changes in the training data.
+    b. Variance measures how much the model's predictions change when training data changes. A high-variance model learns not only the actual patterns but 
+       also noise and random fluctuations.
+    c. Such models perform very well on training data but fail to generalize to new unseen data.
+
+			Behavior of High Variance Model
+				Very high training accuracy.
+				Low testing accuracy.
+				Overfits the data.
+
+
+10. Bias-Variance Tradeoff?
+--> Bias-Variance Tradeoff is the process of finding the right balance between bias and variance to achieve the best model performance.
+    Detailed Explanation:- The total error of a model comes from both: Error due to Bias, Error due to Variance
+   				If bias is too high → Model underfits
+				If variance is too high → Model overfits
+			   So, an ideal model:
+				Learns underlying patterns
+				Ignores noise
+			   Performs well on both training and testing data	
+
+
+11. What are Evaluation Metrics?
+--> i) Evaluation metrics are quantitative measures used to assess the accuracy and performance of a model based on its predictions.
+    ii) After training a model, we must check how accurate its predictions are. Evaluation metrics compare the predicted output with the actual output and 
+        calculate error or correctness.
+	
+    Different types of problems require different metrics:
+	Regression problems → Use error-based metrics.
+	Classification problems → Use accuracy-based metrics.
+	
+
+    a) Evaluation Metrics for Classification:- Classification problems involve predicting categories (e.g., Yes/No, Spam/Not Spam).
+       i) Accuracy:- Accuracy is the ratio of correct predictions to total predictions. Accuracy tells us how many predictions the model got right out of 
+                     all predictions. It is the simplest and most commonly used metric.
+                                     Accuracy = (Correct Predictions) / (Total Predictions)
+               
+		      Limitation:- Accuracy is misleading when data is imbalanced.
+		      Example:- 95% emails are NOT spam, Model predicts everything as NOT spam → 95% accuracy 😱 (but useless)
+
+
+       ii) Confusion Matrix (Foundation Concept):- A confusion matrix is a table used to evaluate classification models by showing actual vs predicted 
+                                                   values.
+       True Positive (Good Catch): It was a Spam email. The filter blocked it.
+       True Negative (Safe Delivery): It was a Normal email. The filter put it in your Inbox.
+       False Positive (The Annoying Mistake): It was a Normal email from your boss. The filter accidentally threw it in the Spam folder. (This is a false 
+                                              alarm).
+       False Negative (The Sneaky Miss): It was a Spam email about a scam. The filter missed it and let it into your Inbox.
+
+
+       For Example:
+          1) If you receive 100 emails, the scorecard sorts them into four simple boxes: 
+			True Positive (Good Catch): It was a Spam email. The filter blocked it.
+                        True Negative (Safe Delivery): It was a Normal email. The filter put it in your Inbox.
+                        False Positive (The Annoying Mistake): It was a Normal email from your boss. The filter accidentally threw it in the Spam folder. 
+                        (This is a false alarm).
+                        False Negative (The Sneaky Miss): It was a Spam email about a scam. The filter missed it and let it into your Inbox.
+			
+    	      Why this scorecard matters for EmailIn the email world, a False Positive is much worse than a False Negative. 
+                   If you get a few spam emails in your Inbox (False Negative), it takes two seconds to delete them.
+                   But if you miss an interview invitation because it went straight to Spam (False Positive), that is a huge problem.The confusion matrix 
+                   helps you tweak your filter so it stops making the dangerous mistakes.
+
+	iii) Precision:- Precision measures how many of the predicted positive values are actually correct.
+             			Formula:- Precision = TP / (TP + FP)
+
+			Detailed Explanation:- Precision focuses on the quality of positive predictions.
+			It answers:- "Out of all predicted YES, how many are actually YES?"
+			Example:- If model predicts 50 emails as spam: 40 are truly spam, Precision = 40/50 = 80%
+
+	iv) Recall:- Recall measures how many actual positive cases were correctly identified.
+			        Formula:- Recall = TP / (TP + FN)
+
+
+			Detailed Explanation:-  Recall focuses on the completeness of prediction.
+ 			It answers:- "Out of all actual YES, how many did the model find?"
+			Example:- Out of 100 actual spam emails: Model detects 80. Recall = 80/100 = 80%
+
+	 v) F1 Score:- F1 Score is the harmonic mean of Precision and Recall, providing a balance between them.
+				Formula:- F1 Score = 2 × (Precision × Recall) / (Precision + Recall)
+
+			Detailed Explanation:- F1 score is useful when: Data is imbalanced. You need a balance between precision and recall
+					       It ensures that both false positives and false negatives are considered.
+
+12. Evaluation Metrics for Regression?
+--> Regression problems deal with predicting numerical values.
+
+	i) Mean Absolute Error (MAE):- a) MAE is the average of absolute differences between actual and predicted values.
+	   				  		Formula:- MAE = (1/n) × Σ |Actual - Predicted|
+
+					b) MAE tells us how far predictions are from actual values on average. It treats all errors equally.
+
+	ii) Mean Squared Error (MSE):- a) MSE is the average of squared differences between actual and predicted values.
+							Formula:- MSE = (1/n) × Σ (Actual - Predicted)²
+				       b) MSE penalizes larger errors more because errors are squared. This makes it useful when large errors are highly 
+                                       	  undesirable. 
+
+	iii) Root Mean Squared Error (RMSE):- a) RMSE is the square root of MSE. Formula:- RMSE = √MSE.
+                                              b) RMSE brings the error back to the original unit, making it easier to interpret.
+
+
+
+13. Cross Validation?
+--> i) Cross Validation is a model evaluation technique where the dataset is divided into multiple parts, and the model is trained and tested multiple times using 
+       different  combinations of data. 
+    ii) The main purpose of cross validation is to get a more reliable estimate of model performance instead of depending on only one train-test split.
+
+    iii) In normal train-test split, we divide the dataset only once, for example:
+			80% data for training
+			20% data for testing
+
+         But the problem is that the model’s performance may depend heavily on how the data was split. If the test data is too easy, the model may show high   
+	 accuracy. If the test data is too difficult, the model may show low accuracy.
+
+	 Cross validation solves this problem by dividing the dataset into multiple smaller parts and testing the model multiple times. Each part gets a 
+         chance to be used as testing data, while the remaining parts are used for training.
+
+	 This gives a better and more stable performance score because the model is evaluated on different portions of the dataset.
+
+
+     iv) Why Cross Validation is Needed?
+         a) To Get Reliable Model Performance
+         A single train-test split may not always give a correct idea about model performance. Sometimes the testing data may not properly represent the 
+         full dataset. Cross validation reduces this risk by testing the model on multiple subsets.
+	
+	 b) To Detect Overfitting
+	 Cross validation helps identify whether the model is overfitting. If the model performs extremely well on training data but gives poor validation 
+	 results across folds, it means the model is not generalizing properly. This is very useful because overfitting is one of the most common problems 
+         in machine learning.
+
+         c) To Compare Different Models
+         When we are trying multiple algorithms, such as Linear Regression, Decision Tree, Random Forest, or SVM, cross validation helps compare their 
+         performance more fairly.
+         Instead of judging models based on one test result, we judge them based on average performance across multiple folds.
+
+14. What is K-Fold Cross Validation?
+--> i) K-Fold Cross Validation is a popular cross validation technique where the dataset is divided into K equal parts, called folds. The model is trained 
+       and tested K times, and each fold is used once as the testing data.
+
+    In K-Fold Cross Validation, the dataset is split into K groups. Suppose we choose K = 5, then the dataset is divided into 5 equal parts.
+
+	The process works like this:
+
+		In the first round, fold 1 is used for testing and the remaining 4 folds are used for training.
+		In the second round, fold 2 is used for testing and the remaining 4 folds are used for training.
+		This continues until every fold has been used once as the testing set. Finally, the performance scores from all rounds are averaged.
+
+	This average score is considered a better estimate of the model’s actual performance.
+
+	Example:
+		 Assume we have a dataset divided into 5 parts: Fold 1 | Fold 2 | Fold 3 | Fold 4 | Fold 5
+		 Round-wise Working:- Round 1
+				      Testing data: Fold 1
+				      Training data: Fold 2, Fold 3, Fold 4, Fold 5
+
+		                      Round 2
+                                      Testing data: Fold 2
+				      Training data: Fold 1, Fold 3, Fold 4, Fold 5
+
+				      Round 3
+				      Testing data: Fold 3
+                                      Training data: Fold 1, Fold 2, Fold 4, Fold 5
+
+				      Round 4
+				      Testing data: Fold 4
+                                      Training data: Fold 1, Fold 2, Fold 3, Fold 5
+
+				      Round 5
+				      Testing data: Fold 5
+				      Training data: Fold 1, Fold 2, Fold 3, Fold 4
+
+				      After all 5 rounds, we calculate the average accuracy or average error.
+			
+				      Fold 1 Accuracy = 82%
+				      Fold 2 Accuracy = 85%
+				      Fold 3 Accuracy = 80%
+				      Fold 4 Accuracy = 84%
+				      Fold 5 Accuracy = 83%
+ 
+                                       Average Accuracy = (82 + 85 + 80 + 84 + 83) / 5
+				       Average Accuracy = 82.8%
+                   So, the model’s performance is considered approximately 82.8%.
+
+       ii) Common Types of Cross Validation:
+           a) Stratified K-Fold Cross Validation:- Stratified K-Fold is mainly used for classification problems, especially when the dataset is imbalanced.
+                                                   In this method, each fold maintains the same class distribution as the original dataset. 
+		
+              The Problem it Solves:- (Regular K-Fold)Random splitting can create unfair folds.
+                                      If data has 90% healthy people and 10% sick people, a random split might accidentally put zero sick people into a 
+                                      fold. This makes model training or testing completely inaccurate.
+
+              The Solution (Stratified K-Fold):- It forces every fold to be a perfect mini-version of the full dataset.
+                                                 Example (100 total samples: 80% Class A, 20% Class B) split into 5 Folds:
+                                                                    Fold 1: 16 of Class A, 4 of Class B
+                                                                    Fold 2: 16 of Class A, 4 of Class B
+                                                                    Fold 3: 16 of Class A, 4 of Class B
+                                                                    Fold 4: 16 of Class A, 4 of Class B
+                                                                    Fold 5: 16 of Class A, 4 of Class B
+     	       
+	      How the Testing Process Works:- Split data into K stratified folds.Loop K times: 
+                                              Use K-1 folds to train the model, and the remaining 1 fold to test it.
+                                              Every fold gets a turn to be the test set exactly once.Final Score: 
+                                              Average the scores from all K rounds.
+
+             b) Leave-One-Out Cross Validation:- 
+	     Leave-One-Out Cross Validation, also called LOOCV, is a special case where each single data point is used once as the test set.
+	     If there are 100 records, the model is trained 100 times.
+	     This gives a very detailed evaluation, but it is computationally expensive and usually not preferred for large datasets.
+
+
+             c) Time-Series Cross Validation:- Time-Series Cross Validation is used when data depends on time order.
+                 For example:
+			Stock price prediction
+			Weather forecasting
+			Sales forecasting
+
+	         In time-series data, we must train on past data and test on future data. We should not randomly shuffle time-based data because that can  
+                 create data leakage.
+
+15. What is Machine Learning Workflow?
+--> A Machine Learning Workflow is a structured sequence of steps used to develop a machine learning model from start to finish.
+    It usually includes: Problem Definition, Data Collection, Data Cleaning, Data Preprocessing, Exploratory Data Analysis, Feature Selection / Feature   
+                                                        Engineering, Train-Test Split, Model Training, Model Evaluation, Model Deployment.
+
+     a) Step 1: Problem Definition:- Problem definition is the first and most important step in a machine learning project. In this step, we clearly identify what problem we want to solve using machine learning.
+     b) Step 2: Data Collection:- Data collection is the process of gathering relevant data required to train the machine learning model.
+     c) Step 3: Data Cleaning:- Data cleaning is the process of correcting or removing inaccurate, incomplete, duplicate, or irrelevant data from the dataset.
+     d) Step 4: Data Preprocessing:- Data preprocessing is the process of transforming raw data into a suitable format for machine learning algorithms.
+     e) Step 5: Exploratory Data Analysis:- Exploratory Data Analysis, also called EDA, is the process of analyzing and visualizing data to understand 
+                patterns,  relationships, and trends.
+					 
+     f) Step 6: Feature Selection and Feature Engineering:- Feature selection means choosing the most useful input variables for the model. Feature engineering means creating new meaningful features from existing data.
+     g) Step 7: Train-Test Split:- Train-test split is the process of dividing the dataset into two parts: Training data, Testing data.
+     h) Step 8: Model Training:- Model training is the process where a machine learning algorithm learns patterns from the training data.
+     i) Step 9: Model Evaluation:- Model evaluation is the process of measuring how well the trained model performs on test data.
+     j) Step 10: Model Deployment:- Model deployment is the process of making the trained model available for real-world use.
+
+16. What is Data Preprocessing?
+--> Data Preprocessing is the process of converting raw data into a clean, structured, and machine-readable format before applying machine learning algorithms. Machine learning models depend heavily on data quality. If the data is incomplete, inconsistent, or noisy, the model will also learn incorrect patterns. This is Common Steps in Data Preprocessing:
+The main steps in data preprocessing are: Handling Missing Values, Removing Duplicate Records, Handling Outliers, Encoding Categorical Data, Feature Scaling, Data Transformation, Splitting Data into Training and Testing Sets.
+   
+     i) Handling Missing Values: Missing values are empty or unavailable values in a dataset. They occur when some data was not recorded, not available, or 
+                                 entered incorrectly. Methods to Handle Missing Values:- Removing Rows, Filling with Mean, Median, and Mode.
+     ii) Removing Duplicate Records: Duplicate records are repeated rows in a dataset.
+     iii) Handling Outliers: Outliers are extremely high or extremely low values that are very different from other values in the dataset.  
+          Ways to Handle Outliers:- Remove Outliers, Cap the Values,  Use Robust Methods.
+     iv) Encoding Categorical Data:- Encoding is the process of converting categorical text data into numerical values. 
+                                       Types of Encoding:- a) Label Encoding:- Label Encoding assigns each category a number.
+                             				   b)  One-Hot Encoding:- One-Hot Encoding creates separate columns for each category.
+     v) Feature Scaling:- Feature Scaling is the process of bringing numerical features into a similar range.
+     vi) Data Transformation:- Data transformation means changing the format or distribution of data to make it more useful for machine learning.
+     vii) Train-Test Split as Part of Preprocessing:- After cleaning and preparing data, we divide it into training and testing sets.
+
+17.  Feature Selection and Feature Engineering?
+--> i) What are Features:- Features = Input variables (X).  These are the variables used by the model to make predictions.
+			Example (House Price Prediction):
+				Area
+				Location
+				Number of rooms
+				Age of property
+
+    ii) What is Feature Selection:- Feature Selection is the process of selecting only the most relevant and important features from a dataset while 
+				    removing unnecessary or irrelevant ones.
+                           Types of Feature Selection Methods:- 
+			   a) Filter Methods:- Filter methods select features based on statistical relationships between input features and output.
+ 		           b) Wrapper Methods:- Wrapper methods select features by training models multiple times with different combinations of features            			   c) Embedded Methods:- Embedded methods perform feature selection during model training.
+   iii) What is Feature Engineering:- Feature Engineering is the process of creating new features from existing data to improve model performance.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Supervised Learning Models
+
+1. What is Linear Regression?
+--> *Linear Regression is a fundamental supervised learning algorithm used to model the relationship between input and output using a straight line. It minimizes the squared error between predicted and actual values to provide accurate numerical predictions.
+         *It tries to establish a linear relationship between variables. 
+         *Linear Regression finds a line such that: Predicted values are as close as possible to actual values,  Errors between predicted & actual values are minimized
+     
+	Linear Regression Equation: y = β₀ + β₁x
+                                   Where:
+					y → Output (target)
+					x → Input (feature)
+					β₀ → Intercept (value when x = 0)
+					β₁ → Slope (rate of change)
+
+				   Intercept (β₀) → where line crosses Y-axis
+				   Slope (β₁) → change in Y for 1 unit change in X
+
+
+	Multiple Linear Regression: y = β₀ + β₁x₁ + β₂x₂ + ... + βₙxₙ 【1-1e2446】. Price = β₀ + β₁(Area) + β₂(Rooms)
+
+
+2. What is Logistic Regression?
+--> * Logistic Regression is a supervised learning algorithm used for classification problems, where the output is categorical (Yes/No, 0/1).  
+          *  Instead of predicting a number, it predicts a probability (between 0 and 1).
+          *  Logistic Regression works in two main step: 	
+		Step 1: Linear Combination
+                      Just like linear regression:  z = w₁x₁ + w₂x₂ + ... + wₙxₙ + b
+				x → input features
+				w → weights
+				b → bias
+				z → raw score (any value)
+
+     		Step 2: Apply Sigmoid Function: σ(z) = 1 / (1 + e^(-z))
+			                   Converts z into a value between 0 and 1
+
+
+		Output = Probability & Range = 0 to 1.
+                
+                Converting Probability to Class: 
+                     After getting probability:  If P ≥ 0.5 → Class = 1, If P < 0.5 → Class = 0. Threshold = usually 0.5
+
+		Example:
+				P(spam) = 0.8 → Spam   
+				P(spam) = 0.3 → Not Spam 
+
+			
+ 
+3. What is a Decision Tree?
+-->* A Decision Tree is a supervised machine learning algorithm that models decisions in the form of a tree-like structure, where data is recursively split into smaller subsets based on feature conditions to arrive at a final prediction.
+
+        *  A decision tree mimics human decision-making behavior. Instead of directly predicting outputs using equations, it breaks down the process into a sequence of simple    
+     logical rules.
+	At each stage, the model asks a question about a feature, such as:
+		"Is Age less than 30?"
+		"Is Income greater than 50,000?"
+
+	Based on the answer, the dataset is divided into smaller groups. This splitting continues step by step until the model reaches a final decision.
+	This makes decision trees highly intuitive and interpretable because you can follow the path of decisions clearly from root to leaf.
+
+        * Structure of a Decision Tree
+
+        1. Root Node:- The root node is the starting point of the tree and represents the entire dataset before any splits are made. At this stage, the 
+                       algorithm selects the best feature that can divide the data most effectively.
+        2. Decision Nodes:- Decision nodes are intermediate nodes where the data is further split based on conditions.
+		            Each node represents a question that divides the data into branches.
+        3. Branches:- Branches represent the outcome of a decision (Yes/No or True/False). They connect nodes and represent the flow of logic.
+	4. Leaf Nodes (Terminal Nodes):- Leaf nodes are the final nodes of the tree where no further splitting occurs. They represent the final prediction:
+					 Class label (for classification), Numerical value (for regression).
+
+      * How Tree Decides "Best Split":- For Classification Problems
+    1. Gini Index:- Gini measures how mixed the classes are in a node. If all data points belong to one class → Gini = 0 (perfect), If mixed → Gini is 
+                    higher.
+    2. Entropy (Information Gain):- Entropy measures disorder or randomness.
+				    High entropy → messy data, Low entropy → pure data
+				    Information Gain measures how much uncertainty is reduced after split.
+
+4. What is Random Forest?
+-->  * Random Forest is a supervised machine learning algorithm that builds multiple decision trees and combines their results to produce a more accurate and stable prediction.
+         * It is an ensemble learning method, meaning: Instead of using one model → we use many models together.
+
+         * Core Idea of Random Forest:- Random Forest improves performance using two key concepts.
+				 1. Bagging (Bootstrap Aggregation):- Instead of training one tree on full dataset:  Random Forest creates multiple datasets 				    using random sampling (with replacement). Each dataset is slightly different. Train one decision tree per dataset.
+ 				 2.Feature Randomness:- Tree considers only a random subset of features, not all features.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Unsupervised Learning Models
+
+1. What is K-Means Clustering?
+--> *  K-Means is an unsupervised learning algorithm that groups data into K clusters by minimizing the distance between data points and their cluster centers (centroids).
+          *  In unsupervised learning, we don’t have labels (no output). So the model must discover patterns on its own.
+		K-Means works by:
+			Finding similarities between data points
+			Grouping similar points together
+			Making sure points in the same cluster are closer to each other than to other clusters
+          
+	a) What is a Cluster and Centroid?
+	--> A cluster is a group of data points that are similar to each other.
+                   --> A centroid is the center of a cluster, calculated as the average of all points in that cluster. It represents that cluster.
+
+                   b) How K-Means Works?
+	--> Step 1: Choose K (Number of Clusters):- The user decides how many clusters to form.
+                   --> Step 2: Initialize Centroids Randomly:- The algorithm randomly selects K points as initial centroids.
+                   -->   Step 3: Assign Data Points to Nearest Centroid:- The algorithm randomly selects K points as initial centroids.
+
+			Distance is usually calculated using Euclidean distance:  Distance = √[(x₁ - x₂)² + (y₁ - y₂)²]
+                   --> Step 4: Update Centroids:- After assigning all points: 
+					Recalculate centroid as: New Centroid = Average of all points in that cluster.
+        --> Step 5: Repeat Until Convergence:- The algorithm repeats: Reassign points, Recalculate centroids.
+                                            Until: No change in clusters.
+
+2. Why Choosing K is Important?
+--> In K-Means, we must choose the number of clusters before running the algorithm.  But in real-world problems: We don’t know how many groups exist 
+    Choosing wrong K leads to poor clustering.
+
+3. What is Elbow Method?
+--> The Elbow Method is used to find the optimal number of clusters by analyzing how clustering error changes as K increases.
+
+    The idea is: Run K-Means for different values of K (1 to 10). Calculate error for each K.
+                 Plot graph
+                    Error is measured using: WCSS (Within Cluster Sum of Squares)
+
+    
+4. Silhouette Score?
+--> Silhouette Score measures how well each data point fits into its assigned cluster compared to other clusters.
+     
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Chapter 1: Retrieval Fundamentals
+What is Retrieval?
+Why Retrieval is Needed in RAG?
+Retriever vs Vector Store
+Retrieval Workflow
+Top-K Retrieval
+Similarity Search Basics
+Retrieval Challenges​‌
+
+Chapter 2: Vector Store Retriever
+VectorStoreRetriever
+Search Types
+Search Parameters
+Top-K Documents
+Score Threshold
+Filtering During Retrieval​‌
+
+Chapter 3: Similarity Search
+Similarity Search Fundamentals
+Cosine Similarity
+Euclidean Distance
+Dot Product
+Top-K Search
+Similarity Scores
+Distance Metrics​‌
+
+Chapter 4: Similarity Score Threshold Retrieval
+Score Threshold Search
+Minimum Similarity Score
+Dynamic Context Filtering
+Precision vs Recall
+No-Match Scenarios
+Threshold Tuning​‌
+
+Chapter 5: MMR Retrieval
+Maximum Marginal Relevance
+Relevance vs Diversity
+Duplicate Context Reduction
+MMR Scoring
+Lambda Parameter
+Context Diversity Optimization​‌
+
+Chapter 6: Parent Document Retriever
+Parent-Child Chunking
+Parent Documents
+Child Chunks
+Retrieval Process
+Context Preservation
+Large Document Handling​‌
+
+Chapter 7: Multi Vector Retriever
+Multiple Embeddings
+Summary Embeddings
+Keyword Embeddings
+Metadata Embeddings
+Multi-Vector Storage
+Multi-Vector Search​‌
+
+Chapter 8: Self Query Retriever
+LLM Generated Filters
+Metadata-Aware Retrieval
+Query Parsing
+Automatic Filter Creation
+Structured Search
+Natural Language Filtering​‌
+
+Chapter 9: Multi Query Retriever
+Query Expansion
+Query Reformulation
+Query Diversification
+Multiple Perspective Search
+Retrieval Coverage Improvement
+Query Generation Strategies​‌
+
+Chapter 10: Contextual Compression Retriever
+Context Compression
+Redundant Context Removal
+Relevant Segment Extraction
+LLM-Based Compression
+Token Reduction
+Cost Optimization​‌
+
+Chapter 11: Ensemble Retriever
+Multiple Retriever Combination
+Score Aggregation
+Voting Mechanisms
+Rank Fusion
+Hybrid Retrieval
+Retrieval Blending​‌
+
+Chapter 12: Hybrid Retrieval
+Semantic Search
+Keyword Search
+BM25
+Dense Retrieval
+Sparse Retrieval
+Hybrid Ranking
+
+Chapter 13: Metadata Filtering
+Metadata-Based Search
+Source Filtering
+Tag Filtering
+Date Filtering
+Department Filtering
+Category Filtering
+
+Chapter 14: Retrieval Ranking
+Ranking Fundamentals
+Re-ranking
+Cross Encoders
+ColBERT
+Rank Fusion
+Search Quality Improvement
+
+Chapter 15: Retrieval Evaluation
+Precision
+Recall
+F1 Score
+Hit Rate
+MRR
+NDCG
+Context Relevance
+Retrieval Accuracy
+Reciprocal Rank Fusion (RRF)​‌
+
+
+
+
+
+
