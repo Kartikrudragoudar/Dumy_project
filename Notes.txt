@@ -1,0 +1,186 @@
+Chapter 1: Introduction to Guardrails AI
+What is Guardrails AI?
+Why Guardrails AI?
+Guardrails Architecture
+How Validation Works
+RAIL Concept
+Guard Object
+Validation Flow
+ReAsk Mechanism
+Chapter 2: Getting Started
+Installation
+OpenAI Integration
+Basic Guard Creation
+Running Validations
+Validation Results
+Error Handling
+Guard Configuration
+CLI Overview
+Chapter 3: Validators Fundamentals
+Validators Overview
+On-Fail Actions
+Validation Metadata
+Pass/Fail Logic
+Field-Level Validators
+Multi-Validator Pipelines
+Validation Chaining
+Validator Lifecycle
+Chapter 4: Built-in Validators
+RegexMatch
+ValidLength
+ValidRange
+ValidChoices
+ValidURL
+ValidEmail
+Competitor Check
+Toxic Language Check
+Chapter 5: Structured Output Validation
+JSON Validation
+Pydantic Models
+Schema Enforcement
+Nested Objects
+Lists and Arrays
+Required Fields
+Type Checking
+Data Correction
+Chapter 6: ReAsk Mechanism
+What is ReAsk?
+Automatic Retry
+Partial ReAsk
+Full ReAsk
+ReAsk Strategies
+Error Recovery
+Validation Feedback
+Retry Optimization
+Chapter 7: Custom Validators
+Creating Validators
+Registering Validators
+ValidationResult
+PassResult
+FailResult
+Custom Error Messages
+Reusable Validators
+Best Practices
+Chapter 8: Input Validation
+User Input Validation
+Prompt Validation
+PII Detection
+Toxicity Detection
+Input Sanitization
+Policy Enforcement
+Query Filtering
+Security Checks
+Chapter 9: Output Validation
+Response Validation
+Hallucination Checks
+Fact Consistency Checks
+Toxicity Filtering
+Output Correction
+Rejection Responses
+Confidence Validation
+Response Quality Control
+Chapter 10: Framework Integrations
+OpenAI
+LangChain
+LlamaIndex
+LiteLLM
+Anthropic
+Gemini
+Azure OpenAI
+Custom LLM Providers
+Chapter 11: Advanced Features
+Validator Chaining
+Multiple Guards
+Dynamic Validators
+Context-Aware Validation
+Async Validation
+Streaming Validation
+Performance Optimization
+Complex Validation Pipelines
+Chapter 12: Production Implementation
+Logging
+Monitoring
+Audit Trails
+Testing Validators
+Scaling Guardrails
+Version Management
+Security Best Practices
+Production Deployment
+
+
+
+
+Explain the topic: [TOPIC NAME]
+
+Use the following structured, interview-ready notes format:
+
+1. Topic Introduction
+   - Start with a short overview of the topic.
+   - Explain where it fits in the framework or architecture.
+
+2. Definition
+   - Give 3 to 4 detailed points.
+   - Explain what the concept is, how it works, and its role.
+   - Keep each point moderately detailed, not one-line definitions.
+
+3. Purpose
+   - Give exactly 4 complete explanatory points.
+   - Explain why the concept is needed and what problems it solves.
+   - Avoid fragmented headings followed by tiny explanations.
+
+4. Architecture Diagram
+   - Provide a clear text-based architecture or workflow diagram.
+   - Show the direction of data and control flow.
+   - Add a detailed explanation below the diagram.
+
+5. Core Components
+   - Include only 4 to 6 components specific to the topic.
+   - Give exactly 2 detailed points for each component.
+   - Avoid repeating generic components unnecessarily.
+
+6. Practical Framework-Based Code Example
+   - Use the most relevant framework:
+     LangGraph, LangChain, or LlamaIndex.
+   - Prefer LangGraph for state, routing, loops, persistence,
+     human-in-the-loop, multi-agent workflows, and recovery.
+   - Prefer LangChain for tools, models, retrievers, agents,
+     callbacks, middleware, and RAG components.
+   - Prefer LlamaIndex for indexing, citation query engines,
+     knowledge graphs, and multimodal retrieval.
+   - Do not use a plain Python simulation when the framework
+     provides a suitable implementation.
+
+7. Code Quality Requirements
+   - Provide one complete, runnable Python program.
+   - Put the complete program inside one Python code block.
+   - Include every required import, class, function, and variable.
+   - Use normal four-space Python indentation.
+   - Use direct Python symbols such as ->, <, >, <=, and >=.
+   - Do not use HTML entities inside the code.
+   - Do not insert asterisks, placeholders, or ellipses.
+   - Avoid unnecessary line wrapping.
+   - Keep the example compact and focused.
+   - Define all referenced state fields and variables.
+   - Include package installation commands separately.
+   - Internally syntax-check the program before presenting it.
+   - End with:
+
+     if __name__ == "__main__":
+         main()
+
+8. Code Explanation
+    - Explain every important class, node, function, edge,
+      state field, reducer, and routing function.
+    - Explain why the chosen framework is appropriate.
+
+9. Interview Questions and Answers
+    - Provide exactly 5 interview-ready questions and answers.
+    - Keep the answers detailed enough to use in an interview.
+
+Formatting requirements:
+- Use clear numbered headings.
+- Use short paragraphs and bullet points.
+- Keep explanations detailed but not unnecessarily lengthy.
+- Do not repeat the same explanation in multiple sections.
+- Do not include corrupted code, HTML tags, or incomplete snippets.
+- Use current framework APIs and avoid deprecated APIs.
